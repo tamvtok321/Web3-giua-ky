@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Application</title>
+    <link href="../static/bootstrap-5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white pd-t-b">
+        <div class="container-fluid pd-l-r">
+            <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarExample01"
+                    aria-controls="navbarExample01"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+            >
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse pink-backgroud pd-header" id="navbarExample01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 center-margin ">
+                    <li class="change nav-item active px-4">
+                        <a class="nav-link font-nav pd-li-nav" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="change nav-item px-4">
+                        <a class="nav-link font-nav pd-li-nav" href="/projects">Projects</a>
+                    </li>
+                    {% block items %}
+                        <li class="change nav-item px-4">
+                            <a class="nav-link font-nav pd-li-nav" href="/signup">Sign Up</a>
+                        </li>
+                        <li class="change nav-item px-4">
+                            <a class="nav-link font-nav pd-li-nav" href="/login">Log In</a>
+                        </li>
+                    {% endblock %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar -->
+</header>
+{% block content %}{% endblock %}
+</body>
+</html>
